@@ -1,69 +1,68 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Crumbs Bakery</title>
-    <link rel="stylesheet" href="styles.css">
-    
-</head>
-
-<body>
-
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container navbar">
-
-            <div class="logo">
-                <h2>Sweet Crumbs</h2>
-                <span>BAKERY</span>
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> <!--meta=provide webpage information, character set and support English,Hindi and many other languages,
+        for special characters-->
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0"> <!--for all devices like phone, laptop, etc
+        and set initial zoom level to 100%-->
+        <title>Sweet Crumbs Bakery</title> 
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+    <body>
+        <!-- header --> 
+        <header class="header"> 
+            <div class="Container navbar"> <!--nahi likhenge, toh aapki website ka header poori tarah se bigad jayega.
+                container= first class and navbar = 2nd class , for apply two different sets of CSS properties to the same element-->
+                <div class="logo">
+                    <h2>Sweet Crumbs</h2>
+                    <span>BAKERY</span> <!--span=an inline container, use for small part of text separately-->
+                </div> <!--div=block level container-->
+            
+                <nav> <!--navigation menu , And links that help viwers to move between different sections/pages-->
+                    <a href="#home">Home</a> <!--href= hypertext reference, where the link goes
+                    #hone = points to an element whose ID is home-->
+                    <!--find elements with matching ID on the same webpage-->
+                    <a href="#products">Products</a> <!--ex: agar hum products pr click krege too browser moves to that section-->
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <a href="contact" class="btn">Contact Us</a> 
+                <!--creates a clickable link that looks like a button when styled with CSS-->
+                
             </div>
+        </header>
 
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#products">Products</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <!-- main section -->
 
-            <a href="#contact" class="btn">Contact Us</a>
-
-        </div>
-    </header>
-
-
-    <!-- Hero Section -->
-    <section class="hero container" id="home">
-
-        <div class="hero-content">
-            <h1>Freshly Baked,<br>Made with Love</h1>
+        <section class="main container" id="home"> <!--id= this section a unique identity-->
+            <!--class = for multiple elements and written in css with . (dot), id = for unique and # in CSS-->
+            <div class="main-content"> <!--now css can style this container-->
+                <!--creates container inside main section
+                for groups the heading, paragraph and button together-->
+            <h1>Freshly Baked, Made with Love</h1>
 
             <p>
-                Artisan breads, buttery pastries and sweet treats,
-                baked fresh every day with the finest ingredients
-                and a whole lot of love.
+                We make fresh bread, cakes and pastries
+                every day using quality ingredients.
             </p>
 
             <a href="#products" class="btn">Explore Products</a>
+            <!--btn = apply button design from CSS-->
+        </div>
+        <div class="main-image">
+            <img src="images/freshly-baked-goods-array-breads-pastries-wood-surface-image-features-assortment-including-loaf-round-bread-416605360.webp" 
+                alt="Freshly baked bread and pastries">
         </div>
 
-        <div class="hero-image">
-            <img src="images/freshly-baked-goods-array-breads-pastries-wood-surface-image-features-assortment-including-loaf-round-bread-416605360.webp"
-                 alt="Freshly baked bread and pastries">
-        </div>
+        </section>
 
-    </section>
+        <!--product-->
+        <section class="products container" id="products">
+            <div class="section-title">
+                <h2>Our Fresh Favourites</h2>
+            </div>
 
-
-    <!-- Products Section -->
-    <section class="products container" id="products">
-
-        <div class="section-title">
-            <h2>Our Fresh Favourites</h2>
-        </div>
-
-        <div class="product-grid">
+        <div class="product-grid"> <!-- to arrange the products horizontally-->
 
             <!-- Product 1 -->
             <div class="product-card">
@@ -79,14 +78,15 @@
                         with a perfectly crisp, golden crust.
                     </p>
 
-                    <h3 class="price">₹120</h3>
+                    <h3 class="price">₹120</h3> <!--price is in another class for different appearance from the product name-->
                 </div>
 
-            </div>
+             </div>
 
 
             <!-- Product 2 -->
-            <div class="product-card">
+             <div class="product-card">
+                <!--class name is same = all three are product cards and need similar styling-->
 
                 <img src="images/1daa7748df42b9c125ffe1bc6e486c0c.jpg"
                      alt="Chocolate muffin">
@@ -102,11 +102,11 @@
                     <h3 class="price">₹150</h3>
                 </div>
 
-            </div>
+             </div>
 
 
             <!-- Product 3 -->
-            <div class="product-card">
+             <div class="product-card">
 
                 <img src="images/OIP.webp"
                      alt="Fresh sourdough bread">
@@ -122,117 +122,89 @@
                     <h3 class="price">₹220</h3>
                 </div>
 
+              </div>
+          </div>
+        </section>
+
+        <!--About section-->
+
+        <section class="about container" id="about">
+            <div class="about-images">
+                <img src="images/baker-preparing-dough-bakery_1265500-108103.jpg" alt="Baker preparing fresh dough">
             </div>
+            <div class="about-content">
+                <h2>A Little About Our Bakery</h2>
+                <p>
+                    Sweet Crumbs Bakery is a neighbourhood bakery born out of a love for good, honest baking. We use quality ingredients, time-honoured recipes and a lot of care to bring you fresh breads, delicious pastries and irresistible sweet treats every day.
+                </p>
+            </div>
+        </section>
 
-        </div>
+        <!--contact section-->
 
-    </section>
-
-
-    <!-- About Section -->
-    <section class="about container" id="about">
-
-        <div class="about-image">
-            <img src="images/baker-preparing-dough-bakery_1265500-108103.jpg"
-                 alt="Baker preparing fresh dough">
-        </div>
-
-        <div class="about-content">
-
-            <h2>A Little About Our Bakery</h2>
-
-            <p>
-                Sweet Crumbs Bakery is a neighbourhood bakery
-                born out of a love for good, honest baking.
-
-                We use quality ingredients, time-honoured
-                recipes and a lot of care to bring you fresh
-                breads, delicious pastries and irresistible
-                sweet treats every day.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-
-        <div class="container contact-grid">
-
-            <div class="contact-content">
-
-                <h2>We'd Love to<br>Hear From You</h2>
-
+        <section class="contact container" id="contact">
+            <div class="contact-grid">
+                <div class="contact-content">
+                 <h2>We'd Love to Hear From You</h2>
                 <p>
                     Have a question, a special request or just
                     want to say hello? Drop us a message —
                     we're always happy to help!
-                </p>
-
+                </p>  
             </div>
-
-
-            <form class="contact-form">
-
-                <div class="form-group">
+            <div class="contact-form">
+                <form class="contact-form"> <!--alag alag div isilye bnye h taki ye next row me aa seke like 1st row name thwn 2nd row me email, etc,           
+                agar sb ko ek hi div me rekhege too sb ek row me aa jayege like name then uske hi age email, etc or like above product images-->
+                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text"
                            id="name"
                            name="name"
                            placeholder="Enter your Name"
                            required>
-                </div>
+                 </div>
 
-                <div class="form-group">
+                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email"
                            id="email"
                            name="email"
                            placeholder="Enter your email"
                            required>
-                </div>
+                 </div>
 
-                <div class="form-group">
+                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message"
+                    <!--textarea = can write multiple lines-->
+                    <textarea id="message" 
                               name="message"
                               rows="5"
                               placeholder="Type your message here..."
-                              required></textarea>
-                </div>
-
-                <button type="submit" class="btn">
+                              required></textarea> 
+                 </div>
+                 <button type="submit" class="btn">
                     Send Message
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer Section -->
-    <footer class="footer">
-
-        <div class="container footer-content">
-
-            <p>
-                © 2026 Sweet Crumbs Bakery.
-                All rights reserved.
-            </p>
-
-            <div class="social-links">
-                <a href="https://www.instagram.com/">Instagram</a>
-                <a href="https://www.facebook.com/">Facebook</a>
-                <a href="https://www.youtube.com/">YouTube</a>
+                 </button>
+              </form>
             </div>
+            </div>
+            
+        </section>
 
-        </div>
+        <!--footer section-->
 
-    </footer>
+        <footer class="footer container" id="footer"> <!--semantic tag for the bottom/footer area.-->
+            <div class="footer-content">
+                <p>
+                    © 2026 Sweet Crumbs Bakery. All rights reserved.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/">Instagram</a>
+                    <a href="https://www.facebook.com/">Facebook</a>
+                    <a href="https://www.youtube.com/">YouTube</a>
+                </div>
+            </div>
+        </footer>
 
-</body>
+    </body>
 </html>

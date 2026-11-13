@@ -1,137 +1,130 @@
+/* selector {
+    property: value;
+} */
 
-/* General Styling */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+/* general*/ 
 
 body {
+    margin: 0; /* Margin means the space outside an element 
+    margin: 0 means remove that default space */
+    padding: 0; /* removes the default inner space of the body */
     background-color: #fff8ed;
     color: #35170f;
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif; /* 3 choices for if arial is not available then use Helvetica and then if it is also not then for 3rd one use */
 }
 
-.container {
-    max-width: 1200px;
-    width: calc(100% - 40px);
+.container{ /* every element for class container */
+    /* it contains the container width */
+    width: 90%;
     margin: auto;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+h1, h2, h3 { /* same rules for all 3 types of headings */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a { /* anchor tag */
+    text-decoration: none; /* remove default underline from links */
+    color: inherit; /* inherit means use the parent's value */
 }
 
-
-/* Header Section */
-
+/* header section */
 .header {
-    border-bottom: 1px solid #cdb5a3;
-    background-color: #fff8ed;
+    background-color: #fff8ed; /* cream bg */
+    border-bottom: 1px solid #cdb5a3; /* create a line at the bottom of the header */
 }
 
-.navbar {
-    min-height: 80px;
-    display: flex;
-    align-items: center;
+.navbar { /* to control navigation layout */
+    display: flex; /* to arrange child elements in a flexible layout */
     justify-content: space-between;
+    align-items: center;
     gap: 25px;
+    padding: 20px 0; /* 20 for top and bottom padding, 0 for left and right padding */
 }
 
-.logo {
+.logo{
     text-align: center;
 }
 
 .logo h2 {
     font-size: 30px;
-    font-weight: 800;
-    line-height: 1.1;
+    margin: 0;
 }
 
 .logo span {
-    display: block;
     font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 3px; /* extra space btw letters */
 }
 
-nav {
-    display: flex;
-    gap: 35px;
+nav { /* navigation element */
+    display: flex; /* Without flex, links may appear inline already, but Flexbox gives you more reliable layout control */ 
+    gap: 20px; /* gap btw home, products, about, contact (which is written at header) */
 }
 
 nav a {
-    font-weight: 700;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
-nav a:hover {
-    color: #b74325;
+nav a:hover { /* hover effect */ 
+    /* When you move your mouse pointer over an element, the hover effect gets activated. */
+    /* jb mouse ko inpr (home, products, etc at header) lekr jayege too inka color change ho jayega */
+    color: #b74325; /* change the link text to reddish brown */
 }
 
 
-/* Buttons */
+/* Button */
 
-.btn {
-    display: inline-block;
-    background-color: #b74325;
-    color: white;
-    padding: 11px 25px;
-    border: none;
-    border-radius: 9px;
+.btn { /*button class*/
+    display: inline-block; 
+    background-color: #b74325; /* bg is reddish brown */
+    color: white; /* button text white */
+    padding: 11px 25px; /* add space inside btn, top&bottom, left&right */
+    border: none; /* Removes the default border */
+    border-radius: 9px; /* Rounds the corners of the button */
     font-size: 16px;
     font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
+    cursor: pointer; /* convert mouse into cursor */
+    transition: 0.3s; /* Makes changes happen smoothly in 0.3 seconds.
+    For example, when you move your mouse over the button, 
+    its colour changes smoothly instead of suddenly. */
 }
 
 .btn:hover {
-    background-color: #92351e;
-    transform: translateY(-2px);
+    background-color: #92351e; /* reddish brown */
+    transform: translateY(-2px); /* Moves the button slightly UP when you move your mouse over it */
 }
 
+/* main section */
 
-/* Hero Section */
-
-.hero {
-    display: grid;
-    grid-template-columns: 0.82fr 1.18fr;
+.main {
+    display: flex;
     align-items: center;
-    gap: 45px;
-    padding-top: 30px;
-    padding-bottom: 35px;
+    gap: 30px;
+    padding: 30px 0;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    line-height: 1.1;
-    margin-bottom: 18px;
+.main-content {
+    width: 40%;
 }
 
-.hero-content p {
-    font-size: 17px;
-    margin-bottom: 22px;
+.main-content h1 {
+    font-size: 45px;
+}
+
+.main-content p {
     color: #71594e;
+    font-size: 17px;
 }
 
-.hero-image img {
+.main-image {
+    width: 60%;
+}
+
+.main-image img {
     width: 100%;
     height: 350px;
-    object-fit: cover;
     border-radius: 15px;
 }
-
 
 /* Products Section */
 
@@ -149,7 +142,7 @@ nav a:hover {
     font-size: 36px;
 }
 
-.product-grid {
+.product-grid { /* to attach all products horizontally*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -168,13 +161,13 @@ nav a:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.product-card img {
+.product-card img { /* to fix image size */ 
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.product-info {
+.product-info { /* write product info in correct manner like not to close to starting idex line */
     padding: 12px 18px;
 }
 
@@ -182,7 +175,7 @@ nav a:hover {
     font-size: 22px;
 }
 
-.product-info p {
+.product-info p { /* color, size of product detail message */
     font-size: 14px;
     color: #71594e;
     margin-bottom: 8px;
@@ -196,7 +189,7 @@ nav a:hover {
 
 /* About Section */
 
-.about {
+.about { /* overall about section or about image ke size me about info */
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -204,27 +197,26 @@ nav a:hover {
     padding-bottom: 55px;
 }
 
-.about-image img {
+.about-images img {
     width: 100%;
     height: 280px;
     object-fit: cover;
     border-radius: 14px;
 }
 
-.about-content h2 {
+.about-content h2 { /* about section ki heading ke liye h ye */
     font-size: 34px;
     margin-bottom: 15px;
 }
 
-.about-content p {
+.about-content p { /* about section ke content or paragraph ke liye */
     font-size: 16px;
     color: #71594e;
 }
 
-
 /* Contact Section */
 
-.contact {
+.contact { /* contact section ka overall like border, bg color, etc */
     border-top: 1px solid #cdb5a3;
     border-bottom: 1px solid #cdb5a3;
     background-color: #f5eadb;
@@ -237,13 +229,13 @@ nav a:hover {
     gap: 60px;
 }
 
-.contact-content h2 {
+.contact-content h2 { /* ye contact section ki heading ke liye h */
     font-size: 42px;
     line-height: 1.15;
     margin-bottom: 18px;
 }
 
-.contact-content p {
+.contact-content p { /* form se phele jo paragraph likha h uske color ke liye h ye */ 
     color: #71594e;
     font-size: 16px;
 }
@@ -265,7 +257,7 @@ nav a:hover {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea { /* text area ko shi krne ke liye.... means normal or large size */
     width: 100%;
     padding: 12px;
     border: 1px solid #b99f8d;
@@ -285,10 +277,9 @@ nav a:hover {
     resize: vertical;
 }
 
-.contact-form button {
+.contact-form button { /* submit button ka size chota krne ke liye h ye */
     align-self: flex-start;
 }
-
 
 /* Footer Section */
 
